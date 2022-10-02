@@ -2,12 +2,12 @@
 
 A theme for Cider with better UI.
 
-![1](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/1.png)
-![2](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/2.png)
-![3](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/3.png)
-![4](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/4.png)
-![5](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/5.png)
-![6](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/6.png)
+![1](https://user-images.githubusercontent.com/51047891/193462927-6e4ad00f-9800-42b9-9bee-c43f8c93f5d1.png)
+![2animation](https://user-images.githubusercontent.com/51047891/193462932-43475634-c259-4b3a-8920-18fc272831e2.gif)
+![3](https://user-images.githubusercontent.com/51047891/193462933-b6dd8651-66ee-4f00-a2bb-afce8ce46112.png)
+![4](https://user-images.githubusercontent.com/51047891/193462935-f0e67168-21ce-4163-991a-5484a0d8f8de.png)
+![5](https://user-images.githubusercontent.com/51047891/193462936-9d06a23c-9e56-4e54-b38b-31e11c9a3df1.png)
+![6](https://user-images.githubusercontent.com/51047891/193462938-f88833f8-fdd9-474e-9b4b-c46a2e7dd687.png)
 
 ---
 
