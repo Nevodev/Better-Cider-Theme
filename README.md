@@ -2,15 +2,15 @@
 
 A theme for Cider with better UI.
 
-![1](1.png)
+![1](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/1.png)
 <video autoplay loop name="media" muted style="width: 100%;">
-      <source src="file:///C:/Users/%E5%AD%99%E5%AE%89%E9%82%A6/Desktop/2animation.webm" type="video/webm">
+      <source src="https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/2animation.webm" type="video/webm">
 </videos>
 
-![3](3.png)
-![4](4.png)
-![5](5.png)
-![6](6.png)
+![3](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/3.png)
+![4](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/4.png)
+![5](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/5.png)
+![6](https://raw.githubusercontent.com/Nevodev/Better-Cider-Theme/main/img/6.png)
 
 ---
 
