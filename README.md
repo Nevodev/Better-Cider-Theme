@@ -2,6 +2,14 @@
 
 A theme for Cider with better UI.
 
+### Features
+*Redesigned UI
+*Animated lyrics background
+*SF Symbols Icons
+*...
+
+---
+
 ![1](https://user-images.githubusercontent.com/51047891/193462927-6e4ad00f-9800-42b9-9bee-c43f8c93f5d1.png)
 ![2animation](https://user-images.githubusercontent.com/51047891/193462932-43475634-c259-4b3a-8920-18fc272831e2.gif)
 ![3](https://user-images.githubusercontent.com/51047891/193462933-b6dd8651-66ee-4f00-a2bb-afce8ce46112.png)
@@ -11,17 +19,12 @@ A theme for Cider with better UI.
 
 ---
 
-### Features
-WIP
-
----
-
 ### See Any Bugs?
 Create an [issue](https://github.com/nevodev/Better-Cider-Theme/issues).
 
 ---
 
 ### License & Credits
-[MIT License]()
+[MIT License](https://github.com/Nevodev/Better-Cider-Theme/blob/main/LICENSE)
 
 #### Designed by [Nevdev](https://github.com/nevodev)
