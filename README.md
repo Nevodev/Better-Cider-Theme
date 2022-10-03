@@ -3,10 +3,10 @@
 A theme for Cider with better UI.
 
 ### Features
-*Redesigned UI
-*Animated lyrics background
-*SF Symbols Icons
-*...
+* Redesigned UI
+* Animated lyrics background
+* SF Symbols Icons
+* ...
 
 ---
 
