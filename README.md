@@ -10,6 +10,13 @@ A theme for Cider with better UI.
 
 ---
 
+###Light Mode (EXPERIMENTAL)
+Still have many bugs. I recommended you to use the dark mode. You can change the Display Style in Styles settings.
+<img width="922" alt="Light Mode" src="https://user-images.githubusercontent.com/51047891/193989446-487fd87a-439a-4187-ba19-0c10cec51e12.png">
+<img width="925" alt="Cider 1_b1" src="https://user-images.githubusercontent.com/51047891/193989741-f6abea67-3002-46e4-9eca-045ff093fb22.png">
+
+---
+
 ![1](https://user-images.githubusercontent.com/51047891/193462927-6e4ad00f-9800-42b9-9bee-c43f8c93f5d1.png)
 ![2animation](https://user-images.githubusercontent.com/51047891/193462932-43475634-c259-4b3a-8920-18fc272831e2.gif)
 ![3](https://user-images.githubusercontent.com/51047891/193462933-b6dd8651-66ee-4f00-a2bb-afce8ce46112.png)
