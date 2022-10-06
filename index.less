@@ -1,16 +1,91 @@
+.volume-button--small {
+    background-image: url(./icons/volumemax.svg);
+    transform: scale(1.2);
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+    transition: transform 0.1s;
+}
+
+.fullscreen-view .fs-header .top-nav-group .app-sidebar-item:before {
+    transform: scale(1);
+    --dist: 4px;
+    border-radius: 8px;
+}
+#app.twopanel .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom input[type="range"]{
+    box-shadow: none;
+}
+#app.twopanel .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom input[type="range"]::-webkit-slider-thumb{
+    background-color: #eee;
+    width: 12px;
+    height: 12px;
+}
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-library"] {
+    --icon: url(./icons/albums.svg) !important;
+    background-color: white;
+}
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-nowPlaying"] {
+    --icon: url(./icons/play.svg) !important;
+    background-color: white;
+}
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
+    --icon: url(./icons/search.svg) !important;
+    background-color: white;
+}
+.fullscreen-view .display--large .volume-button--small.active{
+    background-image: url(icons/volumenone.svg);
+}
+.app-chrome .app-chrome-item.volume>input[type="range"] {
+    margin-left: 16px;
+}
+.search-input-container.fs-search{
+    padding-right: 32px;
+    margin-bottom: 32px;
+    margin-left: 16px;
+}
+.fullscreen-view .cd-mediaitem-square .artwork-container .artwork{
+    box-shadow: none;
+}
+.fullscreen-view .header-text{
+    padding-left: 0;
+}
+.app-chrome .app-chrome-item.volume>input[type="range"]::-webkit-slider-thumb {
+    width: 8px;
+    height: 8px;
+    transition: transform 0.1s;
+    border: none;
+    box-shadow: none;
+}
+
+.app-chrome .app-chrome-item.volume>input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.5);
+}
+
+.volume-button--small.volume.active {
+    background-image: url(icons/volumenone.svg);
+}
+
+.app-chrome-item.generic:has(.playback-button--small.cast) {
+    display: none;
+}
+
 .artist-body>.well {
     padding-right: 0px !important;
 }
-.well.itemContainer.collection-list-square{
+
+.well.itemContainer.collection-list-square {
     margin-right: 24px;
 }
+
 .v-hl-container[data-v-45080727]:not(.v-hl-scroll) {
     padding-right: 32px;
     -webkit-mask-image: none !important;
 }
-.content-inner.library-page{
+
+.content-inner.library-page {
     padding-left: 0;
 }
+
 .v-hl-btn-next.v-hl-btn-between[data-v-45080727] {
     padding-right: 32px;
 }
@@ -73,59 +148,74 @@
 
 
 @media (prefers-color-scheme: light) {}
+
 .artist-page .floating-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(32px) saturate(180%) brightness(0.96);
     background: rgba(255, 255, 255, 0.6);
 }
+
 .library-header button.col.md-btn.md-btn-primary.md-btn-icon {
     color: black;
     filter: brightness(0);
 }
+
 .library-page .library-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(32px) saturate(180%) brightness(0.96);
     background: rgba(255, 255, 255, 0.6);
 }
-.library-page .library-header > div{
+
+.library-page .library-header>div {
     color: black;
 }
-.well{
+
+.well {
     background-color: rgba(242, 242, 246, 1);
 }
-.settings-panel .settings-window .tab-content{
+
+.settings-panel .settings-window .tab-content {
     color: white;
 }
+
 .menu-panel .menu-panel-body {
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(32px) saturate(180%) brightness(0.96);
 }
-.sidebar-icon > .svg-icon{
+
+.sidebar-icon>.svg-icon {
     --color: var(--keyColor);
 }
-.lyric-footer{
+
+.lyric-footer {
     background-image: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.4));
 }
-.lyric-footer > button{
+
+.lyric-footer>button {
     color: black;
 }
-.queue-panel .infinity{
+
+.queue-panel .infinity {
     filter: brightness(0);
 }
-.fancy-pills .nav-pills:after{
+
+.fancy-pills .nav-pills:after {
     background: rgba(200, 200, 200, 0.2);
     z-index: 0;
 }
+
 .playlist-page .playlist-display .playlistInfo .playlist-info .search-btn {
     background: rgba(100, 100, 100, 0.05);
     filter: brightness(0.4);
     border: none;
 }
+
 .playlist-page .playlist-display .playlistInfo .playlist-info .more-btn-round {
     background: rgba(100, 100, 100, 0.05);
     filter: brightness(0.4);
     border: none;
 }
+
 .artist-chip {
     color: black;
 }
@@ -650,9 +740,7 @@
     display: none;
 }
 
-.app-chrome .app-chrome-item.volume {
-    display: none;
-}
+.app-chrome .app-chrome-item.volume {}
 
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--right {
     flex: 0 0;
@@ -1260,39 +1348,49 @@ html.han-la ul>hanla {
         backdrop-filter: var(--glassFilter) brightness(0.6);
         background-color: rgba(255, 255, 255, 0.05);
     }
+
     .library-page .library-header {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         backdrop-filter: var(--glassFilter) brightness(0.6);
         background-color: rgba(255, 255, 255, 0.05);
     }
+
     .library-header button.col.md-btn.md-btn-primary.md-btn-icon {
         color: white;
         filter: brightness(1);
     }
-    .well{
+
+    .well {
         background: rgba(200, 200, 200, 0.05);
     }
+
     .menu-panel .menu-panel-body {
         background: rgba(30, 30, 30, 0.45);
         backdrop-filter: blur(32px) saturate(180%);
     }
-    .lyric-footer{
+
+    .lyric-footer {
         background-image: linear-gradient(180deg, transparent, rgba(30, 30, 30, 0.8));
     }
-    .lyric-footer > button{
+
+    .lyric-footer>button {
         color: white;
     }
-    .queue-panel .infinity{
+
+    .queue-panel .infinity {
         filter: none;
     }
-    .fancy-pills .nav-pills:after{
+
+    .fancy-pills .nav-pills:after {
         background: rgba(200, 200, 200, 0.1);
     }
+
     .playlist-page .playlist-display .playlistInfo .playlist-info .search-btn {
         background: rgba(100, 100, 100, 0.5);
         filter: none;
         border: none;
     }
+
     .playlist-page .playlist-display .playlistInfo .playlist-info .more-btn-round {
         background: rgba(100, 100, 100, 0.5);
         filter: none;
@@ -1820,9 +1918,7 @@ html.han-la ul>hanla {
         display: none;
     }
 
-    .app-chrome .app-chrome-item.volume {
-        display: none;
-    }
+    .app-chrome .app-chrome-item.volume {}
 
     #app.twopanel .app-chrome.chrome-bottom .app-chrome--right {
         flex: 0 0;
