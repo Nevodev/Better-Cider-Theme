@@ -12,43 +12,54 @@
     --dist: 4px;
     border-radius: 8px;
 }
-#app.twopanel .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom input[type="range"]{
+
+#app.twopanel .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom input[type="range"] {
     box-shadow: none;
 }
-#app.twopanel .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom input[type="range"]::-webkit-slider-thumb{
+
+#app.twopanel .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom input[type="range"]::-webkit-slider-thumb {
     background-color: #eee;
     width: 12px;
     height: 12px;
 }
+
 .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-library"] {
     --icon: url(./icons/albums.svg) !important;
     background-color: white;
 }
+
 .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-nowPlaying"] {
     --icon: url(./icons/play.svg) !important;
     background-color: white;
 }
+
 .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
     --icon: url(./icons/search.svg) !important;
     background-color: white;
 }
-.fullscreen-view .display--large .volume-button--small.active{
+
+.fullscreen-view .display--large .volume-button--small.active {
     background-image: url(icons/volumenone.svg);
 }
+
 .app-chrome .app-chrome-item.volume>input[type="range"] {
     margin-left: 16px;
 }
-.search-input-container.fs-search{
+
+.search-input-container.fs-search {
     padding-right: 32px;
     margin-bottom: 32px;
     margin-left: 16px;
 }
-.fullscreen-view .cd-mediaitem-square .artwork-container .artwork{
+
+.fullscreen-view .cd-mediaitem-square .artwork-container .artwork {
     box-shadow: none;
 }
-.fullscreen-view .header-text{
+
+.fullscreen-view .header-text {
     padding-left: 0;
 }
+
 .app-chrome .app-chrome-item.volume>input[type="range"]::-webkit-slider-thumb {
     width: 8px;
     height: 8px;
@@ -402,41 +413,29 @@
 
 @keyframes rotateBgNew {
     0% {
-        transform: scale(1);
-        filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-        transform-origin: top;
-        width: 200%
+        transform: rotate(0deg) translateY(-50vh) translateX(-50vw);
     }
 
     25% {
-        transform: scale(2);
-        filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
+        transform: rotate(90deg) translateY(100vh) translateX(-30vw);
     }
 
     50% {
-        transform: scale(3);
-        filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-        transform-origin: bottom;
-        width: 200%
+        transform: rotate(180deg) translateY(100vh) translateX(0vw);
     }
 
     75% {
-        transform: scale(2);
-        filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-        transform-origin: right;
-        width: 200%
+        transform: rotate(270deg) translateY(-100vh) translateX(50vw);
     }
 
     100% {
-        transform: scale(1);
-        filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-        transform-origin: left;
-        width: 200%
+        transform: rotate(360deg) translateY(-50vh) translateX(-50vw);
     }
 }
 
 .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork {
-    animation: rotateBgNew 120s ease-in-out infinite !important;
+    animation: rotateBgNew 60s ease-in-out infinite !important;
+    filter: contrast(0.9) brightness(75%) saturate(125%) blur(160px)  opacity(0.9);
 }
 
 .bg-artwork {
@@ -1579,44 +1578,6 @@ html.han-la ul>hanla {
         transform: scale(1);
     }
 
-    @keyframes rotateBgNew {
-        0% {
-            transform: scale(1);
-            filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-            transform-origin: top;
-            width: 200%
-        }
-
-        25% {
-            transform: scale(2);
-            filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-        }
-
-        50% {
-            transform: scale(3);
-            filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-            transform-origin: bottom;
-            width: 200%
-        }
-
-        75% {
-            transform: scale(2);
-            filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-            transform-origin: right;
-            width: 200%
-        }
-
-        100% {
-            transform: scale(1);
-            filter: brightness(85%) saturate(1.2) opacity(0.6) contrast(2) blur(128px);
-            transform-origin: left;
-            width: 200%
-        }
-    }
-
-    .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork {
-        animation: rotateBgNew 120s ease-in-out infinite !important;
-    }
 
     .bg-artwork {
         width: 200%;
