@@ -6,6 +6,7 @@ A theme for Cider with better UI.
 * Redesigned UI
 * Animated lyrics background
 * SF Symbols Icons
+* TV Style Top Bar
 * Light mode (EXPERIMENTAL)
 * ...
 
@@ -18,6 +19,13 @@ Still have many bugs. I recommended you to use the dark mode. You can change the
 
 ---
 
+### 10/16 Update
+* TV Style Top Bar (for immersive fullscreen)
+![TV Style Top Bar](https://user-images.githubusercontent.com/51047891/196014575-7f18a467-4506-44a3-bf65-67fca6a00899.png)
+
+---
+
+### Screen Shots
 ![1](https://user-images.githubusercontent.com/51047891/193462927-6e4ad00f-9800-42b9-9bee-c43f8c93f5d1.png)
 ![2animation](https://user-images.githubusercontent.com/51047891/193462932-43475634-c259-4b3a-8920-18fc272831e2.gif)
 ![3](https://user-images.githubusercontent.com/51047891/193462933-b6dd8651-66ee-4f00-a2bb-afce8ce46112.png)
