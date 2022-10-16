@@ -7,10 +7,65 @@
     transition: transform 0.1s;
 }
 
+
+.fullscreen-view .app-content-container #app-content .fs-search .search-input--icon{
+    background-image: url(./icons/search.svg);
+    transform: scale(1.5);
+}
+.fullscreen-view .app-content-container #app-content .fs-search input{
+    border: none;
+    border-radius: 12px;
+}
+
+/*fullscreen top bar*/
+
+.fullscreen-view .fs-header .top-nav-group .app-sidebar-item{
+    color: white;
+    width: unset;
+    min-width: 0;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    font-size: 1.3em;
+}
+.fullscreen-view .fs-header .top-nav-group .app-sidebar-item.active{
+    color: black;
+}
+.fullscreen-view .fs-header .top-nav-group .app-sidebar-item.active::before{
+    background-color: white;
+    opacity: 1;
+    z-index: -1;
+    transform: scale(1.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .fullscreen-view .fs-header .top-nav-group .app-sidebar-item:before {
     transform: scale(1);
     --dist: 4px;
     border-radius: 8px;
+    border-radius: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0);
+    transition: all 0.4s cubic-bezier(0.2, 0.2, 0, 1) !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active>._svg-icon {
+    background-color: black !important;
+
+}
+.fullscreen-view>.fs-header>.top-nav-group{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    height: 2.8em;
+    border-radius: 100px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    width: unset;
 }
 
 #app.twopanel .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom input[type="range"] {
@@ -36,7 +91,21 @@
 .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
     --icon: url(./icons/search.svg) !important;
     background-color: white;
+    display: block !important;
 }
+
+.fullscreen-view ._svg-icon{
+    background-color: white !important;
+    display: none;
+}
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item:has(._svg-icon[svg-name="sidebar-search"])>.sidebar-item-text{
+    display: none;
+}
+
+/*fullscreen top bar end here*/
+
+
+
 
 .fullscreen-view .display--large .volume-button--small.active {
     background-image: url(icons/volumenone.svg);
@@ -159,7 +228,56 @@
 
 
 @media (prefers-color-scheme: light) {}
+.fullscreen-view>.fs-header>.top-nav-group{
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: brightness(3) blur(40px) saturate(180%);
+}
 
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
+    background-color: black !important;
+}
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item{
+    color: black !important;
+}
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active{
+    color: black !important;
+}
+.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group{
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active>._svg-icon[svg-name="sidebar-search"] {
+    background-color: black !important;
+}
+.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
+    background-color: white !important;
+}
+.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item{
+    color: white !important;
+}
+.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item.active{
+    color: black !important;
+}
+
+
+
+
+
+
+.tooltip-inner{
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    color:black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 0.4em;
+    border: none;
+    opacity: 1 !important;
+}
+.tooltip.show{
+    opacity: 1 !important;
+}
+.tooltip:not(.show){
+    opacity: 1 !important;
+}
 .artist-page .floating-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(32px) saturate(180%) brightness(0.96);
@@ -285,7 +403,7 @@
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: var(--glassFilter) brightness(0.96);
     z-index: 7;
-    box-shadow: 0 8px 40px rgb(0 0 0 / 0.2);
+    box-shadow: 0 8px 40px rgb(0 0 0 / 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .search-page .searchToggle>button:hover {
@@ -434,8 +552,8 @@
 }
 
 .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork {
-    animation: rotateBgNew 60s ease-in-out infinite !important;
-    filter: contrast(0.9) brightness(75%) saturate(125%) blur(160px)  opacity(0.9);
+    animation: rotateBgNew 120s ease-in-out infinite !important;
+    filter: contrast(0.9) brightness(75%) saturate(125%) blur(200px)  opacity(0.9);
 }
 
 .bg-artwork {
@@ -1342,6 +1460,53 @@ html.han-la ul>hanla {
 }
 
 @media(prefers-color-scheme: dark) {
+    .fullscreen-view>.fs-header>.top-nav-group{
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        backdrop-filter: brightness(1) blur(40px) saturate(180%);
+    }
+    .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active>._svg-icon[svg-name="sidebar-search"] {
+        background-color: black !important;
+    }
+    .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
+        background-color: white !important;
+    }
+    .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item{
+        color: white !important;
+    }
+    .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active{
+        color: black !important;
+    }
+    .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
+        background-color: white !important;
+    }
+    .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item{
+        color: white !important;
+    }
+    .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item.active{
+        color: black !important;
+    }
+
+
+
+
+
+
+
+    .tooltip-inner{
+        background-color: rgba(0,0,0,0.6);
+        backdrop-filter: blur(16px) saturate(180%) !important;
+        color:white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+        border-radius: 0.4em;
+        border: none;
+        opacity: 1 !important;
+    }
+    .tooltip.show{
+        opacity: 1 !important;
+    }
+    .tooltip:not(.show){
+        opacity: 1 !important;
+    }
     .artist-page .floating-header {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         backdrop-filter: var(--glassFilter) brightness(0.6);
@@ -1455,6 +1620,7 @@ html.han-la ul>hanla {
         backdrop-filter: var(--glassFilter);
         z-index: 7;
         box-shadow: 0 8px 40px rgb(0 0 0 / 0.55);
+        box-shadow: 0 8px 40px rgb(0 0 0 / 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
     }
 
     .search-page .searchToggle>button:hover {
