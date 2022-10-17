@@ -7,19 +7,161 @@
     transition: transform 0.1s;
 }
 
+/*new fullscreen buttons*/
+.fullscreen-view .tab-toggles .lyrics.active {
+    background-image: none !important;
+    backdrop-filter: brightness(2);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    -webkit-mask-image: url(./icons/lyricsmask.svg);
+    transition: all 0.2s;
+}
+.fullscreen-view .tab-toggles .lyrics {
+    background-image: none !important;
+    backdrop-filter: brightness(2);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    -webkit-mask-image: url(./icons/lyrics.svg);
+    -webkit-mask-size: 100%;
+    transition: all 0.2s;
+}
 
-.fullscreen-view .app-content-container #app-content .fs-search .search-input--icon{
+
+
+.fullscreen-view .tab-toggles .queue.active {
+    background-image: none !important;
+    backdrop-filter: brightness(2);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    -webkit-mask-image: url(./icons/listmask.svg);
+    transition: all 0.2s;
+}
+.fullscreen-view .tab-toggles .queue {
+    background-image: none !important;
+    backdrop-filter: brightness(2);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    -webkit-mask-image: url(./icons/list.svg);
+    -webkit-mask-size: 100%;
+    transition: all 0.2s;
+}
+.fullscreen-view .lyrics-col{
+    width: 60vh;
+}
+.fullscreen-view .queue-col{
+    width: 60vh;
+}
+.fullscreen-view .queue-col .queue-title{
+    opacity: 1;
+}
+
+.queue-panel .infinity{
+    content: '';
+}
+.queue-panel .autoplay[style="background: var(--keyColor);"]{
+    backdrop-filter: brightness(2);
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    -webkit-mask-image: url(./icons/infinitymask.svg);
+    -webkit-mask-size: 100%;
+    transition: all 0.2s;
+}
+.queue-panel .autoplay{
+    background-image: none !important;
+    backdrop-filter: brightness(2);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    -webkit-mask-image: url(./icons/infinity.svg);
+    -webkit-mask-size: 100%;
+    transition: all 0.2s !important;
+}
+.queue-panel .autoplay:hover{
+    background-image: none !important;
+    backdrop-filter: brightness(2);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    -webkit-mask-size: 100%;
+    transition: all 0.2s;
+}
+
+
+
+
+
+.app-drawer .queue-panel .autoplay[style="background: var(--keyColor);"]{
+    backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    -webkit-mask-image: url(./icons/infinitymask.svg);
+    -webkit-mask-size: 100%;
+    transition: all 0.2s;
+}
+.app-drawer .queue-panel .autoplay{
+    background-image: none !important;
+    backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    -webkit-mask-image: url(./icons/infinity.svg);
+    -webkit-mask-size: 100%;
+    transition: all 0.2s !important;
+}
+.app-drawer .queue-panel .autoplay:hover{
+    background-image: none !important;
+    backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border-radius: 0;
+    -webkit-mask-size: 100%;
+    transition: all 0.2s;
+}
+
+.lyric-line:has(.lyricWaiting){
+    min-height: 16px;
+    // margin-top: 0px;
+    // margin-bottom: 0px;
+    transition: opacity 1s cubic-bezier(0.2, 0.2, 0, 1), min-height 1s cubic-bezier(0.2, 0.2, 0, 1), margin-top 1s cubic-bezier(0.2, 0.2, 0, 1), margin-bottom 1s cubic-bezier(0.2, 0.2, 0, 1) !important;
+}
+.lyric-line.active:has(.lyricWaiting){
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+    min-height: calc(32px + 16px);
+}
+.lyric-line:last-of-type{
+    margin-bottom: 40vh;
+}
+
+
+
+// .fullscreen-view .tab-toggles .lyrics.active::after {
+//     content: "none";
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     top: 0;
+//     background-image: url(./icons/lyricsactive1.svg);
+//     background-size: 2.5vh;
+//     font-size: 0;
+//     opacity: 0;
+// }
+
+
+
+
+
+
+
+
+.fullscreen-view .app-content-container #app-content .fs-search .search-input--icon {
     background-image: url(./icons/search.svg);
     transform: scale(1.5);
 }
-.fullscreen-view .app-content-container #app-content .fs-search input{
+
+.fullscreen-view .app-content-container #app-content .fs-search input {
     border: none;
     border-radius: 12px;
 }
 
 /*fullscreen top bar*/
 
-.fullscreen-view .fs-header .top-nav-group .app-sidebar-item{
+.fullscreen-view .fs-header .top-nav-group .app-sidebar-item {
     color: white;
     width: unset;
     min-width: 0;
@@ -27,10 +169,12 @@
     padding-right: 1.2em;
     font-size: 1.3em;
 }
-.fullscreen-view .fs-header .top-nav-group .app-sidebar-item.active{
+
+.fullscreen-view .fs-header .top-nav-group .app-sidebar-item.active {
     color: black;
 }
-.fullscreen-view .fs-header .top-nav-group .app-sidebar-item.active::before{
+
+.fullscreen-view .fs-header .top-nav-group .app-sidebar-item.active::before {
     background-color: white;
     opacity: 1;
     z-index: -1;
@@ -54,11 +198,13 @@
     left: 0;
     right: 0;
 }
+
 .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active>._svg-icon {
     background-color: black !important;
 
 }
-.fullscreen-view>.fs-header>.top-nav-group{
+
+.fullscreen-view>.fs-header>.top-nav-group {
     background-color: rgba(0, 0, 0, 0.2) !important;
     height: 2.8em;
     border-radius: 100px;
@@ -94,11 +240,12 @@
     display: block !important;
 }
 
-.fullscreen-view ._svg-icon{
+.fullscreen-view ._svg-icon {
     background-color: white !important;
     display: none;
 }
-.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item:has(._svg-icon[svg-name="sidebar-search"])>.sidebar-item-text{
+
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item:has(._svg-icon[svg-name="sidebar-search"])>.sidebar-item-text {
     display: none;
 }
 
@@ -228,7 +375,8 @@
 
 
 @media (prefers-color-scheme: light) {}
-.fullscreen-view>.fs-header>.top-nav-group{
+
+.fullscreen-view>.fs-header>.top-nav-group {
     background-color: rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: brightness(1.2) blur(40px) saturate(180%);
 }
@@ -236,25 +384,32 @@
 .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
     background-color: black !important;
 }
-.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item{
+
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item {
     color: black !important;
 }
-.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active{
+
+.fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active {
     color: black !important;
 }
-.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group{
+
+.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group {
     background-color: rgba(0, 0, 0, 0.05) !important;
 }
+
 .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active>._svg-icon[svg-name="sidebar-search"] {
     background-color: black !important;
 }
+
 .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
     background-color: white !important;
 }
-.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item{
+
+.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item {
     color: white !important;
 }
-.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item.active{
+
+.fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item.active {
     color: black !important;
 }
 
@@ -263,21 +418,24 @@
 
 
 
-.tooltip-inner{
-    background-color: rgba(255,255,255,0.6);
+.tooltip-inner {
+    background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(16px) saturate(180%) !important;
-    color:black;
+    color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     border-radius: 0.4em;
     border: none;
     opacity: 1 !important;
 }
-.tooltip.show{
+
+.tooltip.show {
     opacity: 1 !important;
 }
-.tooltip:not(.show){
+
+.tooltip:not(.show) {
     opacity: 1 !important;
 }
+
 .artist-page .floating-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(32px) saturate(180%) brightness(0.96);
@@ -531,7 +689,7 @@
 
 @keyframes rotateBgNew {
     0% {
-        transform: rotate(0deg) translateY(-50vh) translateX(-50vw);
+        transform: rotate(0deg) translateY(-50vh) translateX(-100vw);
     }
 
     25% {
@@ -539,21 +697,21 @@
     }
 
     50% {
-        transform: rotate(180deg) translateY(100vh) translateX(0vw);
+        transform: rotate(180deg) translateY(100vh) translateX(50vw);
     }
 
     75% {
-        transform: rotate(270deg) translateY(-100vh) translateX(50vw);
+        transform: rotate(270deg) translateY(-100vh) translateX(100vw);
     }
 
     100% {
-        transform: rotate(360deg) translateY(-50vh) translateX(-50vw);
+        transform: rotate(360deg) translateY(-50vh) translateX(-100vw);
     }
 }
 
 .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork {
     animation: rotateBgNew 120s ease-in-out infinite !important;
-    filter: contrast(0.9) brightness(75%) saturate(125%) blur(200px)  opacity(0.9);
+    filter: contrast(0.9) brightness(75%) saturate(125%) blur(200px) opacity(0.9);
 }
 
 .bg-artwork {
@@ -675,37 +833,10 @@
     background: rgb(255 255 255 / 8%);
 }
 
-.queue-panel .autoplay {
-    background: none;
-    transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-}
 
-.queue-panel .autoplay:hover {
-    background: rgb(255 255 255 / 20%);
-    transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-}
 
-.fullscreen-view .tab-toggles .lyrics:hover {
-    border-radius: 25%;
-    // background-color: rgb(255 255 255 / 10%);
-    transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-}
 
-.fullscreen-view .tab-toggles .queue:hover {
-    border-radius: 25%;
-    // background-color: rgb(255 255 255 / 10%);
-    transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-}
 
-.fullscreen-view .tab-toggles .queue {
-    border-radius: 25%;
-    transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-}
-
-.fullscreen-view .tab-toggles .lyrics {
-    border-radius: 25%;
-    transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-}
 
 
 
@@ -759,24 +890,24 @@
 }
 
 .playback-button.next {
-    background-size: 32px;
+    background-size: 40px;
     transition: background-size 0.6s cubic-bezier(.41, 2.5, .4, 1);
     margin-left: 1vh;
 }
 
 .playback-button.previous {
-    background-size: 32px;
+    background-size: 40px;
     transition: background-size 0.6s cubic-bezier(.41, 2.5, .4, 1);
     margin-right: 1vh;
 }
 
 .playback-button.next:active {
-    background-size: 24px;
+    background-size: 32px;
     transition: background-size 0.4s cubic-bezier(.41, 2.5, .4, 1);
 }
 
 .playback-button.previous:active {
-    background-size: 24px;
+    background-size: 32px;
     transition: background-size 0.4s cubic-bezier(.41, 2.5, .4, 1);
 }
 
@@ -1340,29 +1471,7 @@ html.han-la ul>hanla {
     width: 32px;
 }
 
-.fullscreen-view .tab-toggles .lyrics {
-    background-image: url(./icons/lyrics.svg) !important;
-    transform: scale(1.5);
-    background-size: 2.5vh;
-    background-position: center;
-    opacity: 0.7;
-}
 
-.fullscreen-view .tab-toggles .lyrics.active {
-    opacity: 1;
-}
-
-.fullscreen-view .tab-toggles .queue {
-    background-image: url(./icons/list.svg) !important;
-    transform: scale(1.5);
-    background-size: 2.5vh;
-    background-position: center;
-    opacity: 0.7;
-}
-
-.fullscreen-view .tab-toggles .queue.active {
-    opacity: 1;
-}
 
 // .playback-button.navigation > div[style~='left'] {
 //     --icon: url(./icons/left.svg) !important;
@@ -1460,29 +1569,36 @@ html.han-la ul>hanla {
 }
 
 @media(prefers-color-scheme: dark) {
-    .fullscreen-view>.fs-header>.top-nav-group{
+    .fullscreen-view>.fs-header>.top-nav-group {
         background-color: rgba(0, 0, 0, 0.4) !important;
         backdrop-filter: brightness(1.2) blur(40px) saturate(180%);
     }
+
     .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active>._svg-icon[svg-name="sidebar-search"] {
         background-color: black !important;
     }
+
     .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
         background-color: white !important;
     }
-    .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item{
+
+    .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item {
         color: white !important;
     }
-    .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active{
+
+    .fullscreen-view>.fs-header>.top-nav-group>.app-sidebar-item.active {
         color: black !important;
     }
+
     .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item>._svg-icon[svg-name="sidebar-search"] {
         background-color: white !important;
     }
-    .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item{
+
+    .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item {
         color: white !important;
     }
-    .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item.active{
+
+    .fullscreen-view:has(.row.fs-row)>.fs-header>.top-nav-group>.app-sidebar-item.active {
         color: black !important;
     }
 
@@ -1492,21 +1608,24 @@ html.han-la ul>hanla {
 
 
 
-    .tooltip-inner{
-        background-color: rgba(0,0,0,0.6);
+    .tooltip-inner {
+        background-color: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(16px) saturate(180%) !important;
-        color:white;
+        color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
         border-radius: 0.4em;
         border: none;
         opacity: 1 !important;
     }
-    .tooltip.show{
+
+    .tooltip.show {
         opacity: 1 !important;
     }
-    .tooltip:not(.show){
+
+    .tooltip:not(.show) {
         opacity: 1 !important;
     }
+
     .artist-page .floating-header {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         backdrop-filter: var(--glassFilter) brightness(0.6);
@@ -1864,37 +1983,9 @@ html.han-la ul>hanla {
         background: rgb(255 255 255 / 8%);
     }
 
-    .queue-panel .autoplay {
-        background: none;
-        transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-    }
 
-    .queue-panel .autoplay:hover {
-        background: rgb(255 255 255 / 20%);
-        transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-    }
 
-    .fullscreen-view .tab-toggles .lyrics:hover {
-        border-radius: 25%;
-        // background-color: rgb(255 255 255 / 10%);
-        transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-    }
 
-    .fullscreen-view .tab-toggles .queue:hover {
-        border-radius: 25%;
-        // background-color: rgb(255 255 255 / 10%);
-        transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-    }
-
-    .fullscreen-view .tab-toggles .queue {
-        border-radius: 25%;
-        transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-    }
-
-    .fullscreen-view .tab-toggles .lyrics {
-        border-radius: 25%;
-        transition: all 0.4s cubic-bezier(.2, .2, 0, 1);
-    }
 
 
 
@@ -1949,24 +2040,24 @@ html.han-la ul>hanla {
     }
 
     .playback-button.next {
-        background-size: 32px;
+        background-size: 40px;
         transition: background-size 0.6s cubic-bezier(.41, 2.5, .4, 1);
         margin-left: 1vh;
     }
 
     .playback-button.previous {
-        background-size: 32px;
+        background-size: 40px;
         transition: background-size 0.6s cubic-bezier(.41, 2.5, .4, 1);
         margin-right: 1vh;
     }
 
     .playback-button.next:active {
-        background-size: 24px;
+        background-size: 32px;
         transition: background-size 0.4s cubic-bezier(.41, 2.5, .4, 1);
     }
 
     .playback-button.previous:active {
-        background-size: 24px;
+        background-size: 32px;
         transition: background-size 0.4s cubic-bezier(.41, 2.5, .4, 1);
     }
 
@@ -2529,27 +2620,12 @@ html.han-la ul>hanla {
     }
 
     .fullscreen-view .tab-toggles .lyrics {
-        background-image: url(./icons/lyrics.svg) !important;
         transform: scale(1.5);
-        background-size: 2.5vh;
-        background-position: center;
-        opacity: 0.7;
     }
 
-    .fullscreen-view .tab-toggles .lyrics.active {
-        opacity: 1;
-    }
 
     .fullscreen-view .tab-toggles .queue {
-        background-image: url(./icons/list.svg) !important;
         transform: scale(1.5);
-        background-size: 2.5vh;
-        background-position: center;
-        opacity: 0.7;
-    }
-
-    .fullscreen-view .tab-toggles .queue.active {
-        opacity: 1;
     }
 
     // .playback-button.navigation > div[style~='left'] {
