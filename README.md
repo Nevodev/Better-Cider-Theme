@@ -12,16 +12,26 @@ A theme for Cider with better UI.
 
 ---
 
+## Update Logs
+## 10/17 Update
+* The last line of the lyrics will now be displayed at the top (both drawer and fullscreen)
+![Fullscreen](https://user-images.githubusercontent.com/51047891/196203739-8e4bea8a-7a2f-4780-bece-9918dc4d302c.png)
+* Improved fullscreen background animation
+* New style of fullscreen lyric/queue button
+<img width="117" alt="image" src="https://user-images.githubusercontent.com/51047891/196204227-c9162d89-be94-4fa9-852d-13a20f41c695.png">
+* Other fixes
+
+## 10/16 Update
+* TV Style Top Bar (for immersive fullscreen)
+![TV Style Top Bar](https://user-images.githubusercontent.com/51047891/196203432-9b887e7e-09b0-409a-bedf-7d0f8b45d268.png)
+
+
+---
+
 ### Light Mode (EXPERIMENTAL)
 Still have many bugs. I recommended you to use the dark mode. You can change the Display Style in Styles settings.
 ![1](https://user-images.githubusercontent.com/51047891/193989446-487fd87a-439a-4187-ba19-0c10cec51e12.png)
 ![2](https://user-images.githubusercontent.com/51047891/193989741-f6abea67-3002-46e4-9eca-045ff093fb22.png)
-
----
-
-### 10/16 Update
-* TV Style Top Bar (for immersive fullscreen)
-![TV Style Top Bar](https://user-images.githubusercontent.com/51047891/196014575-7f18a467-4506-44a3-bf65-67fca6a00899.png)
 
 ---
 
