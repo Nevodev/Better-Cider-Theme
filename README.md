@@ -18,12 +18,12 @@ A theme for Cider with better UI.
 ![Fullscreen](https://user-images.githubusercontent.com/51047891/196203739-8e4bea8a-7a2f-4780-bece-9918dc4d302c.png)
 * Improved fullscreen background animation
 * New style of fullscreen lyric/queue button
-<img width="117" alt="image" src="https://user-images.githubusercontent.com/51047891/196204227-c9162d89-be94-4fa9-852d-13a20f41c695.png">
+![Buttons]("https://user-images.githubusercontent.com/51047891/196204227-c9162d89-be94-4fa9-852d-13a20f41c695.png)
 * Other fixes
 
 ## 10/16 Update
 * TV Style Top Bar (for immersive fullscreen)
-![TV Style Top Bar](https://user-images.githubusercontent.com/51047891/196203432-9b887e7e-09b0-409a-bedf-7d0f8b45d268.png)
+![TV Style Top Bar](https://user-images.githubusercontent.com/51047891/196204819-4dd29ca8-4d3a-45f1-ae6f-431fa89737e0.png)
 
 
 ---
