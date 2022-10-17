@@ -18,7 +18,7 @@ A theme for Cider with better UI.
 ![Fullscreen](https://user-images.githubusercontent.com/51047891/196203739-8e4bea8a-7a2f-4780-bece-9918dc4d302c.png)
 * Improved fullscreen background animation
 * New style of fullscreen lyric/queue button
-![Buttons]("https://user-images.githubusercontent.com/51047891/196204227-c9162d89-be94-4fa9-852d-13a20f41c695.png)
+![Buttons](https://user-images.githubusercontent.com/51047891/196204227-c9162d89-be94-4fa9-852d-13a20f41c695.png)
 * Other fixes
 
 ## 10/16 Update
