@@ -6,7 +6,53 @@
     border-radius: 0;
     transition: transform 0.1s;
 }
-
+/* fullscreen waiting dots fix */
+.lyric-line:has(.lyricWaiting){
+    opacity: 0 !important;
+}
+.lyric-line.active:has(.lyricWaiting){
+    opacity: 1 !important;
+}
+/* color button fix */
+.playlistInfo:has(> .playlist-hero > .hero-tint) > .row > .col.playlist-info > .playlist-controls > .md-btn.md-btn-icon{
+    filter: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.playlistInfo:has(> .playlist-hero > .hero-tint) > .row > .col.playlist-info > .playlist-controls > div > .search-btn{
+    filter: brightness(1);
+}
+.playlistInfo:has(> .playlist-hero > .hero-tint) > .row > .col.playlist-info > .playlist-controls > div > .more-btn-round{
+    filter: brightness(1);
+}
+.playlistInfo:has(> .playlist-hero > .hero-tint) > .row > .col.playlist-info > .playlist-controls > div > button > .svg-icon{
+    background-color: white !important;
+}
+.playlistInfo:has(> .playlist-hero > .hero-tint) > .row > .col.playlist-info > .playlist-controls > div > button > ._svg-icon{
+    background-color: white !important;
+}
+/* replay page */
+.replay-page hr{
+    display: none !important;
+}
+.replay-viewport{
+    margin-right: 24px;
+}
+.replay-page .replay-viewport .replay-header{
+    text-shadow: none;
+}
+.replay-viewport > .well{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.content-inner.replay-page .vue-horizontal{
+    height: unset !important;
+margin-bottom: 32px;
+}
+.replay-viewport .v-hl-svg[data-v-45080727]{
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    color: white;
+}
 /*new fullscreen buttons*/
 .fullscreen-view .tab-toggles .lyrics.active {
     background-image: none !important;
@@ -116,7 +162,7 @@
     min-height: 16px;
     // margin-top: 0px;
     // margin-bottom: 0px;
-    transition: opacity 1s cubic-bezier(0.2, 0.2, 0, 1), min-height 1s cubic-bezier(0.2, 0.2, 0, 1), margin-top 1s cubic-bezier(0.2, 0.2, 0, 1), margin-bottom 1s cubic-bezier(0.2, 0.2, 0, 1) !important;
+    transition: opacity 5s cubic-bezier(0.2, 0.2, 0, 1), min-height 1s cubic-bezier(0.2, 0.2, 0, 1), margin-top 1s cubic-bezier(0.2, 0.2, 0, 1), margin-bottom 1s cubic-bezier(0.2, 0.2, 0, 1) !important;
 }
 .lyric-line.active:has(.lyricWaiting){
     // margin-top: 10px;
@@ -375,7 +421,14 @@
 
 
 @media (prefers-color-scheme: light) {}
+.fullscreen-view .tab-toggles .lyrics {
+    transform: scale(1.5);
+}
 
+
+.fullscreen-view .tab-toggles .queue {
+    transform: scale(1.5);
+}
 .fullscreen-view>.fs-header>.top-nav-group {
     background-color: rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: brightness(1.2) blur(40px) saturate(180%);
