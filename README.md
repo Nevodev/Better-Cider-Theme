@@ -13,6 +13,9 @@ A theme for Cider with better UI.
 ---
 
 ## Update Logs
+## 10/20 Update
+* Small fixes
+
 ## 10/17 Update
 * The last line of the lyrics will now be displayed at the top (both drawer and fullscreen)
 ![Fullscreen](https://user-images.githubusercontent.com/51047891/196203739-8e4bea8a-7a2f-4780-bece-9918dc4d302c.png)
