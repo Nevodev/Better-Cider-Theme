@@ -1,5 +1,7 @@
 # Better Cider Theme for [Cider](https://cider.sh/) <img src="https://img.shields.io/github/stars/nevodev/Better-Cider-Theme?style=social" width="auto"></img>
 
+This theme is no longer supported.
+
 A theme for Cider with better UI.
 
 ### Features
